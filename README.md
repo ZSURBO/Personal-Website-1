@@ -250,6 +250,84 @@ yarn build
 
 ## 开发指南
 
+### 图片位置
+根据项目结构，所有图片文件应该存放在 `public/images` 目录下。以下是需要的图片文件列表：
+```
+public/
+└── images/
+    ├── avatar.jpg              # 个人头像图片
+    ├── projects/              # 项目相关图片
+    │   ├── project1.jpg       # 项目1截图
+    │   ├── project2.jpg       # 项目2截图
+    │   └── project3.jpg       # 项目3截图
+    ├── blog/                 # 博客文章相关图片
+    │   ├── post1.jpg         # 博客文章1配图
+    │   ├── post2.jpg         # 博客文章2配图
+    │   └── post3.jpg         # 博客文章3配图
+    ├── certs/                # 证书图片
+    │   ├── aws.png           # AWS认证证书
+    │   ├── react.png         # React认证证书
+    │   └── google.png        # Google认证证书
+    └── icons/                # 图标文件
+        ├── github.svg        # GitHub图标
+        ├── linkedin.svg      # LinkedIn图标
+        ├── twitter.svg       # Twitter图标
+        ├── email.svg         # 邮箱图标
+        ├── phone.svg         # 电话图标
+        ├── location.svg      # 位置图标
+        ├── dark-mode.svg     # 深色模式图标
+        └── light-mode.svg    # 浅色模式图标
+```
+
+这些图片在不同组件中的使用位置：
+
+1. `avatar.jpg`
+   - 在 `ProfileSection.js` 组件中使用
+   - 用于显示个人头像
+
+2. `projects/*.jpg`
+   - 在 `ProjectCard.js` 和 `FeaturedProjects.js` 组件中使用
+   - 用于展示项目截图
+
+3. `blog/*.jpg`
+   - 在 `BlogPostList.js` 组件中使用
+   - 用于博客文章的配图
+
+4. `certs/*.png`
+   - 在 `CertificationsSection.js` 组件中使用
+   - 用于展示专业证书
+
+5. `icons/*.svg`
+   - 在 `SocialLinks.js` 组件中使用社交媒体图标
+   - 在 `ContactInfo.js` 组件中使用联系方式图标
+   - 在 `DarkModeToggle.js` 组件中使用主题切换图标
+
+注意事项：
+1. 所有图片应该经过优化，以确保加载性能
+2. 建议使用 `.jpg` 格式存储照片，`.png` 格式存储需要透明背景的图片
+3. 图标推荐使用 `.svg` 格式，以确保清晰度和可缩放性
+4. 图片命名应该具有描述性，便于维护和管理
+5. 可以根据实际需求添加或修改图片目录结构
+
+在组件中引用图片的方式：
+```jsx
+// Next.js的Image组件方式
+import Image from 'next/image';
+
+<Image
+  src="/images/avatar.jpg"
+  alt="个人头像"
+  width={200}
+  height={200}
+/>
+
+// 普通img标签方式
+<img
+  src="/images/icons/github.svg"
+  alt="GitHub"
+/>
+```
+
 ### 添加新页面
 1. 在 `pages` 目录创建新的页面文件
 2. 创建对应的样式模块
