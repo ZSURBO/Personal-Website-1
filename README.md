@@ -298,11 +298,6 @@ yarn upgrade
 
 MIT License - 查看 [LICENSE](LICENSE) 文件了解详情
 
-## 联系方式
-
-- 作者：[您的名字]
-- 邮箱：[您的邮箱]
-- 网站：[您的网站]
 
 ## 致谢
 
