@@ -117,6 +117,57 @@ src/
 
 ```
 
+## 配置文件
+- `next.config.js`: Next.js配置文件，设置图片优化、国际化等
+- `package.json`: 项目依赖和脚本配置
+
+## 主要功能模块说明
+
+### 页面组件 (pages/)
+- `_app.js`: 应用入口，配置全局样式和布局
+- `index.js`: 首页，展示个人简介和精选作品
+- `about.js`: 关于页面，展示详细个人信息和技能
+- `portfolio.js`: 作品集页面，展示项目作品
+- `blog.js`: 博客页面，展示文章列表
+- `contact.js`: 联系页面，提供联系方式和表单
+
+### 布局组件 (components/layout/)
+- `Header.js`: 网站导航栏，包含页面链接和深色模式切换
+- `Footer.js`: 网站底部，包含版权信息和其他链接
+
+### 页面区块组件 (components/sections/)
+- `Hero.js`: 首页顶部展示区，突出个人定位
+- `FeaturedProjects.js`: 展示精选项目
+- `ProfileSection.js`: 个人简介和背景
+- `SkillsSection.js`: 技能和专长展示
+- `TimelineSection.js`: 职业经历时间线
+- `CertificationsSection.js`: 证书和认证展示
+- `BlogPostList.js`: 博客文章列表展示
+- `ContactForm.js`: 联系表单处理
+- `ContactInfo.js`: 联系方式和社交媒体信息
+
+### UI组件 (components/ui/)
+- `ProjectCard.js`: 项目展示卡片
+- `ProjectFilter.js`: 项目分类筛选
+- `BlogSearch.js`: 博客搜索和标签筛选
+- `SubscribeForm.js`: 博客订阅功能
+- `SocialLinks.js`: 社交媒体链接
+- `DarkModeToggle.js`: 深色模式切换按钮
+- `ResumeButton.js`: 简历下载按钮
+- `Map.js`: Google地图集成
+
+### 样式文件 (styles/)
+每个样式模块对应其组件，使用CSS Modules实现样式隔离：
+- `globals.css`: 全局样式变量和基础样式
+- 其他`.module.css`文件: 对应组件的专属样式
+
+### 静态资源 (public/)
+- 图片资源
+- 简历文件
+- 网站图标
+
+这个结构遵循了React和Next.js的最佳实践，实现了组件的模块化和代码的可维护性。每个组件都有其专属的样式文件，确保了样式的隔离性。同时，通过合理的目录组织，使得项目结构清晰，便于管理和扩展。
+
 ## 主要功能模块
 
 ### 1. 首页 (Home)
