@@ -57,12 +57,64 @@ yarn dev
 ```
 src/
 ├── components/           # 组件目录
-│   ├── layout/          # 布局组件
-│   ├── sections/        # 页面区块组件
+│   ├── layout/          # 布局相关组件
+│   │   ├── Header.js    # 网站头部导航组件
+│   │   └── Footer.js    # 网站底部组件
+│   │
+│   ├── sections/        # 页面主要区块组件
+│   │   ├── Hero.js                # 首页顶部展示区
+│   │   ├── FeaturedProjects.js    # 精选项目展示
+│   │   ├── ProfileSection.js      # 关于页个人简介
+│   │   ├── SkillsSection.js       # 技能展示区域
+│   │   ├── TimelineSection.js     # 时间线/经历展示
+│   │   ├── CertificationsSection.js # 证书展示
+│   │   ├── BlogPostList.js        # 博客文章列表
+│   │   ├── CaseStudy.js          # 项目案例研究
+│   │   ├── ContactForm.js         # 联系表单
+│   │   └── ContactInfo.js         # 联系信息展示
+│   │
 │   └── ui/             # 通用UI组件
-├── pages/              # 页面组件
-├── styles/            # 样式文件
-└── public/            # 静态资源
+│       ├── ProjectCard.js         # 项目卡片组件
+│       ├── ProjectFilter.js       # 项目筛选组件
+│       ├── BlogSearch.js          # 博客搜索组件
+│       ├── SubscribeForm.js       # 订阅表单组件
+│       ├── SocialLinks.js         # 社交媒体链接
+│       ├── DarkModeToggle.js      # 深色模式切换
+│       ├── ResumeButton.js        # 简历下载按钮
+│       └── Map.js                 # 地图组件
+│
+├── pages/              # 页面组件目录
+│   ├── _app.js        # Next.js应用入口
+│   ├── index.js       # 首页
+│   ├── about.js       # 关于页面
+│   ├── portfolio.js   # 作品集页面
+│   ├── blog.js        # 博客页面
+│   └── contact.js     # 联系页面
+│
+├── styles/            # 样式文件目录
+│   ├── globals.css    # 全局样式
+│   ├── Home.module.css     # 首页样式
+│   ├── About.module.css    # 关于页样式
+│   ├── Portfolio.module.css # 作品集页样式
+│   ├── Blog.module.css     # 博客页样式
+│   ├── Contact.module.css  # 联系页样式
+│   ├── Hero.module.css     # Hero组件样式
+│   ├── Header.module.css   # 头部导航样式
+│   ├── ProjectCard.module.css # 项目卡片样式
+│   ├── Timeline.module.css    # 时间线样式
+│   └── Certifications.module.css # 证书展示样式
+│
+└── public/            # 静态资源目录
+    ├── images/        # 图片资源
+    │   ├── avatar.jpg      # 个人头像
+    │   └── certs/          # 证书图片
+    │       ├── aws.png
+    │       ├── react.png
+    │       └── google.png
+    ├── resume-cn.pdf # 中文简历
+    ├── resume-en.pdf # 英文简历
+    └── favicon.ico   # 网站图标
+
 ```
 
 ## 主要功能模块
