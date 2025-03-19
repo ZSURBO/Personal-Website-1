@@ -1,0 +1,108 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 0 2rem;
+    margin-top: 80px; /* 为固定的header留出空间 */
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-color);
+  }
+  
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .filterContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .filterButton {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filterButton:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .filterButton.active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .caseStudySection {
+    margin: 4rem 0;
+    padding: 3rem;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dark mode styles */
+  [data-theme="dark"] .title {
+    color: var(--light-color);
+  }
+  
+  [data-theme="dark"] .filterButton {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-color);
+  }
+  
+  [data-theme="dark"] .filterButton:hover,
+  [data-theme="dark"] .filterButton.active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  [data-theme="dark"] .caseStudySection {
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .main {
+      padding: 0 1rem;
+      margin-top: 60px;
+    }
+  
+    .title {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+  
+    .projectsGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .caseStudySection {
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+  }
