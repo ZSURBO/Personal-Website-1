@@ -1,5 +1,5 @@
 # 个人网站项目 (Personal Website)
-# 全程有cursor编写
+## 全程由cursor编写
 一个使用 Next.js 构建的现代化个人网站，支持响应式设计、深色模式和多语言。
 
 ## 功能特点
